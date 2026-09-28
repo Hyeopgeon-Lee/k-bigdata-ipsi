@@ -23,3 +23,11 @@
 데이터가 안 보이면 GAS 접근 권한, /exec URL, 시트명과 첫 행 컬럼을 확인합니다. 오래된 정보면 localStorage의 kopo.cms를 지우고 data_version을 올립니다. Project Pages에서 자원이 404면 루트 절대경로(/assets)를 사용하지 않았는지 확인합니다.
 
 공식 정보: [2027 모집요강](https://www.kopo.ac.kr/kangseo/content.do?menu=321), [인터넷 원서접수 안내](https://www.kopo.ac.kr/kangseo/content.do?menu=1714).
+
+## 2026 입시 홍보 디자인 리뉴얼
+
+- 공통 홍보 이미지: `assets/images/hero-main.webp`, `section-find-major.webp`, `section-outcomes.webp`, `banner-apply-cta.webp`
+- 학과별 이미지: `assets/images/departments/dept-*.webp`
+- 모든 인물 이미지는 교육 분야와 분위기를 표현한 AI 생성 홍보 비주얼이며 실제 재학생·시설 사진이 아닙니다.
+- Hero 이미지는 우선 로딩하고, 나머지 이미지는 지연 로딩과 고정 비율을 사용합니다.
+- 디자인 토큰과 공통 컴포넌트는 `assets/css/common.css`에서 관리합니다.
