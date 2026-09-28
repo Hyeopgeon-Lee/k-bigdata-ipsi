@@ -1,0 +1,1 @@
+// Shared components are progressively enhanced in common.js.

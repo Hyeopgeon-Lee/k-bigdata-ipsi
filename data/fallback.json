@@ -1,0 +1,226 @@
+{
+  "ok": true,
+  "version": "2026.09.28.1",
+  "updatedAt": "2026-09-28T00:00:00+09:00",
+  "data": {
+    "config": {
+      "admission_year": "2027",
+      "site_title": "2027 서울강서캠퍼스 입학안내",
+      "campus_name": "한국폴리텍대학 서울강서캠퍼스",
+      "campus_phone": "02-2186-5815",
+      "campus_address": "서울특별시 강서구 우장산로10길 112",
+      "base_site_url": "https://hyeopgeon-lee.github.io/k-bigdata-ipsi/"
+    },
+    "departments": [
+      {
+        "id": "BIGDATA",
+        "slug": "bigdata",
+        "name": "빅데이터소프트웨어공학과",
+        "short": "빅데이터SW",
+        "tag": "데이터를 이해하고, AI와 SW로 실제 서비스를 만들다.",
+        "keys": [
+          "AI",
+          "소프트웨어",
+          "데이터",
+          "클라우드"
+        ],
+        "learn": [
+          "프로그래밍과 소프트웨어 개발",
+          "데이터 분석과 인공지능 활용",
+          "클라우드 기반 서비스 구현"
+        ],
+        "career": "소프트웨어·데이터·클라우드 분야 실무 역량을 탐색합니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1547"
+      },
+      {
+        "id": "CONTENT",
+        "slug": "content",
+        "name": "디지털콘텐츠과",
+        "short": "디지털콘텐츠",
+        "tag": "아이디어를 영상과 디자인으로 콘텐츠화하다.",
+        "keys": [
+          "영상",
+          "모션그래픽",
+          "UX/UI",
+          "디지털콘텐츠"
+        ],
+        "learn": [
+          "영상 기획과 제작",
+          "모션그래픽 실습",
+          "UX/UI와 디지털 콘텐츠 제작"
+        ],
+        "career": "영상·콘텐츠 제작과 디자인 분야의 포트폴리오를 준비합니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1517"
+      },
+      {
+        "id": "HEALTH",
+        "slug": "health",
+        "name": "보건의료정보과",
+        "short": "보건의료정보",
+        "tag": "의료와 정보를 연결하는 보건의료 실무전문가",
+        "keys": [
+          "보건의료정보",
+          "병원행정",
+          "보험심사",
+          "의료정보"
+        ],
+        "learn": [
+          "의료정보관리",
+          "병원행정",
+          "보험심사와 의료정보시스템"
+        ],
+        "career": "간호학과가 아닌 보건의료 정보·행정 실무 분야를 준비합니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1522"
+      },
+      {
+        "id": "SECURITY",
+        "slug": "security",
+        "name": "사이버보안과",
+        "short": "사이버보안",
+        "tag": "공격을 이해하고, 디지털 세상을 지키는 보안전문가",
+        "keys": [
+          "정보보안",
+          "네트워크",
+          "웹보안",
+          "시큐어코딩"
+        ],
+        "learn": [
+          "네트워크와 시스템 보안",
+          "웹 보안과 시큐어코딩",
+          "보안 분석·방어 프로젝트"
+        ],
+        "career": "네트워크·시스템·웹 보안 직무에 필요한 분석과 방어 역량을 기릅니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=12135"
+      },
+      {
+        "id": "JEWELRY",
+        "slug": "jewelry",
+        "name": "주얼리디자인과",
+        "short": "주얼리디자인",
+        "tag": "아이디어를 디자인하고, 손과 기술로 완성하다.",
+        "keys": [
+          "주얼리디자인",
+          "보석",
+          "3D CAD",
+          "제작"
+        ],
+        "learn": [
+          "주얼리 디자인 기획",
+          "3D CAD 활용",
+          "재료와 제작 공정 실습"
+        ],
+        "career": "디자인부터 제작까지 작품 중심 포트폴리오를 준비합니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1542"
+      },
+      {
+        "id": "FASHION",
+        "slug": "fashion",
+        "name": "패션디자인과",
+        "short": "패션디자인",
+        "tag": "아이디어에서 디자인·제작, 그리고 브랜드까지.",
+        "keys": [
+          "패션디자인",
+          "패턴",
+          "CAD",
+          "마케팅"
+        ],
+        "learn": [
+          "패션 디자인과 패턴",
+          "CAD 활용과 의복 제작",
+          "포트폴리오와 패션 마케팅"
+        ],
+        "career": "패션 디자인·패턴·제작·브랜드 분야의 실무 역량을 준비합니다.",
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1409"
+      }
+    ],
+    "schedule": [
+      {
+        "year": 2027,
+        "round_id": "SUSI1",
+        "round_name": "수시1차",
+        "application_start": "2026-09-07T00:00:00+09:00",
+        "application_end": "2026-10-01T23:59:00+09:00",
+        "interview_date": "2026-10-14",
+        "result_date": "2026-10-22",
+        "registration_start": "",
+        "registration_end": "",
+        "apply_url": "https://apply.jinhakapply.com/Notice/5041044/A",
+        "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "status_override": "AUTO",
+        "active": true
+      },
+      {
+        "year": 2027,
+        "round_id": "SUSI2",
+        "round_name": "수시2차",
+        "application_start": "2026-11-11T00:00:00+09:00",
+        "application_end": "2026-11-27T23:59:00+09:00",
+        "interview_date": "",
+        "result_date": "",
+        "registration_start": "",
+        "registration_end": "",
+        "apply_url": "",
+        "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "status_override": "AUTO",
+        "active": true
+      },
+      {
+        "year": 2027,
+        "round_id": "JEONGSI",
+        "round_name": "정시",
+        "application_start": "2027-01-04T00:00:00+09:00",
+        "application_end": "2027-01-22T23:59:00+09:00",
+        "interview_date": "",
+        "result_date": "",
+        "registration_start": "",
+        "registration_end": "",
+        "apply_url": "",
+        "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+        "status_override": "AUTO",
+        "active": true
+      }
+    ],
+    "results": [],
+    "outcomes": [],
+    "faq": [
+      {
+        "category": "admission",
+        "q": "수시 합격 후 수능을 보아야 하나요?",
+        "a": "한국폴리텍대학은 수시 합격자에게 별도로 수능점수를 요구하지 않습니다. 정시 일반전형에서 성적 반영을 수능으로 선택하면 해당 연도 수능성적이 필요합니다."
+      },
+      {
+        "category": "admission",
+        "q": "자기소개서를 제출해야 하나요?",
+        "a": "공식 FAQ에 따르면 수시 및 정시모집 지원 시 자기소개서를 제출하지 않아도 됩니다."
+      },
+      {
+        "category": "admission",
+        "q": "특별전형 지원자도 일반전형에 지원할 수 있나요?",
+        "a": "공식 FAQ에 따르면 특별전형 지원자격이 있어도 일반전형 지원이 가능합니다. 세부 사항은 해당 연도 모집요강을 확인하세요."
+      },
+      {
+        "category": "department",
+        "q": "보건의료정보과는 간호학과인가요?",
+        "a": "보건의료정보과는 간호학과가 아닙니다. 의료정보관리, 병원행정, 보험심사, 의료정보시스템 등 보건의료 정보·행정 실무를 중심으로 살펴보는 학과입니다."
+      },
+      {
+        "category": "department",
+        "q": "학과별 세부 교육과정은 어디에서 확인하나요?",
+        "a": "각 학과 카드와 상세 화면의 ‘공식 학과 홈페이지’ 버튼에서 최신 교육과정과 학과 소식을 확인할 수 있습니다."
+      },
+      {
+        "category": "admission",
+        "q": "원서접수 일정은 어디에서 확인하나요?",
+        "a": "이 사이트의 입시안내와 서울강서캠퍼스 공식 모집요강 페이지에서 확인하세요. 일정은 공식 안내가 우선합니다."
+      }
+    ],
+    "links": {
+      "official_admission": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
+      "application_guide": "https://www.kopo.ac.kr/kangseo/content.do?menu=1714",
+      "apply_susi1": "https://apply.jinhakapply.com/Notice/5041044/A"
+    }
+  }
+}

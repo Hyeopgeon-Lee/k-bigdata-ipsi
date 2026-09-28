@@ -1,0 +1,1 @@
+window.KOPO_CONFIG={basePath:'/k-bigdata-ipsi/',apiEndpoint:''};

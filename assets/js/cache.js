@@ -1,0 +1,1 @@
+// localStorage cache is implemented in common.js.

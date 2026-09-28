@@ -1,0 +1,4 @@
+key,value,type,description,active
+admission_year,2027,number,모집 학년도,TRUE
+data_version,2026.09.28.1,string,데이터 버전,TRUE
+base_site_url,https://hyeopgeon-lee.github.io/k-bigdata-ipsi/,url,사이트 주소,TRUE

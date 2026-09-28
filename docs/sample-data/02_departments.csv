@@ -1,0 +1,7 @@
+dept_id,slug,name,short_name,tagline,category,keywords,official_url,hero_image,sort_order,active
+BIGDATA,bigdata,빅데이터소프트웨어공학과,빅데이터SW,"데이터를 이해하고, AI와 SW로 실제 서비스를 만들다.",degree,AI|소프트웨어|데이터|클라우드,https://www.kopo.ac.kr/kangseo/content.do?menu=1547,,1,TRUE
+CONTENT,content,디지털콘텐츠과,디지털콘텐츠,아이디어를 영상과 디자인으로 콘텐츠화하다.,degree,영상|모션그래픽|UX/UI|디지털콘텐츠,https://www.kopo.ac.kr/kangseo/content.do?menu=1517,,2,TRUE
+HEALTH,health,보건의료정보과,보건의료정보,의료와 정보를 연결하는 보건의료 실무전문가,degree,보건의료정보|병원행정|보험심사|의료정보,https://www.kopo.ac.kr/kangseo/content.do?menu=1522,,3,TRUE
+SECURITY,security,사이버보안과,사이버보안,"공격을 이해하고, 디지털 세상을 지키는 보안전문가",degree,정보보안|네트워크|웹보안|시큐어코딩,https://www.kopo.ac.kr/kangseo/content.do?menu=12135,,4,TRUE
+JEWELRY,jewelry,주얼리디자인과,주얼리디자인,"아이디어를 디자인하고, 손과 기술로 완성하다.",degree,주얼리디자인|보석|3D CAD|제작,https://www.kopo.ac.kr/kangseo/content.do?menu=1542,,5,TRUE
+FASHION,fashion,패션디자인과,패션디자인,"아이디어에서 디자인·제작, 그리고 브랜드까지.",degree,패션디자인|패턴|CAD|마케팅,https://www.kopo.ac.kr/kangseo/content.do?menu=1409,,6,TRUE
