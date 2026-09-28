@@ -1,7 +1,7 @@
 {
   "name": "2027 서울강서캠퍼스 입학안내",
   "short_name": "서울강서 입학",
-  "start_url": "/k-bigdata-ipsi/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0756a3"
