@@ -7,6 +7,8 @@
 .dept-card-body strong{font-size:1.35rem;line-height:1.25}
 .dept-copy{color:var(--muted)}
 .dept-card .text-link{margin-top:4px}
+.hero-facts{margin-top:20px}
+.hero-copy .lead strong{color:var(--navy);font-weight:900}
 .feature-row.three{grid-template-columns:repeat(3,1fr)}
 .feature h3{margin:.6rem 0 .25rem}
 .schedule-band{background:var(--navy);color:#fff}
