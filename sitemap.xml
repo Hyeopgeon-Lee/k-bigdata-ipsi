@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ipsi.k-bigdata.kr/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/bigdata/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/content/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/health/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/security/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/jewelry/</loc></url><url><loc>https://ipsi.k-bigdata.kr/departments/fashion/</loc></url><url><loc>https://ipsi.k-bigdata.kr/find/</loc></url><url><loc>https://ipsi.k-bigdata.kr/compare/</loc></url><url><loc>https://ipsi.k-bigdata.kr/outcomes/</loc></url><url><loc>https://ipsi.k-bigdata.kr/admission/</loc></url><url><loc>https://ipsi.k-bigdata.kr/results/</loc></url><url><loc>https://ipsi.k-bigdata.kr/faq/</loc></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ipsi.k-bigdata.kr/</loc></url>
+  <url><loc>https://ipsi.k-bigdata.kr/departments/</loc></url>
+  <url><loc>https://ipsi.k-bigdata.kr/find/</loc></url>
+  <url><loc>https://ipsi.k-bigdata.kr/admission/</loc></url>
+  <url><loc>https://ipsi.k-bigdata.kr/faq/</loc></url>
+</urlset>
