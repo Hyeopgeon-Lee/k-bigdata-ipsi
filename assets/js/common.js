@@ -15,7 +15,7 @@ function formatDateRange(start,end,showEndTime=false){
   const first=formatDate(start);
   const last=formatDate(end,showEndTime);
   return start.slice(0,4)===end.slice(0,4)
-    ?`${first} ~ ${last.replace(/^\\d{4}\\./,'')}`
+    ?`${first} ~ ${last.replace(/^\d{4}\./,'')}`
     :`${first} ~ ${last}`;
 }
 function applyUrl(round){return round.apply_url||SITE.data.links.application_guide}
