@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "version": "2026.09.28.1",
-  "updatedAt": "2026-09-28T00:00:00+09:00",
+  "version": "2026.11.02.susi2",
+  "updatedAt": "2026-11-02T08:30:00+09:00",
   "data": {
     "config": {
       "admission_year": "2027",
@@ -9,7 +9,10 @@
       "campus_name": "한국폴리텍대학 서울강서캠퍼스",
       "campus_phone": "02-2186-5815",
       "campus_address": "서울특별시 강서구 우장산로10길 112",
-      "base_site_url": "https://ipsi.k-bigdata.kr/"
+      "base_site_url": "https://ipsi.k-bigdata.kr/",
+      "admission_focus": "SUSI2",
+      "verified_at": "2026-11-02",
+      "official_guide_pdf": "https://www.kopo.ac.kr/cmm/fms/Download.do?atchFileId=FILE_000000000452216&fileSn=0"
     },
     "departments": [
       {
@@ -30,7 +33,8 @@
           "클라우드 기반 서비스 구현"
         ],
         "career": "소프트웨어·데이터·클라우드 분야 실무 역량을 탐색합니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1547"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1547",
+        "susi2_seats": 4
       },
       {
         "id": "CONTENT",
@@ -50,7 +54,8 @@
           "UX/UI와 디지털 콘텐츠 제작"
         ],
         "career": "영상·콘텐츠 제작과 디자인 분야의 포트폴리오를 준비합니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1517"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1517",
+        "susi2_seats": 6
       },
       {
         "id": "HEALTH",
@@ -70,7 +75,8 @@
           "보험심사와 의료정보시스템"
         ],
         "career": "간호학과가 아닌 보건의료 정보·행정 실무 분야를 준비합니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1522"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1522",
+        "susi2_seats": 4
       },
       {
         "id": "SECURITY",
@@ -90,7 +96,8 @@
           "보안 분석·방어 프로젝트"
         ],
         "career": "네트워크·시스템·웹 보안 직무에 필요한 분석과 방어 역량을 기릅니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=12135"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=12135",
+        "susi2_seats": 4
       },
       {
         "id": "JEWELRY",
@@ -110,7 +117,8 @@
           "재료와 제작 공정 실습"
         ],
         "career": "디자인부터 제작까지 작품 중심 포트폴리오를 준비합니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1542"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1542",
+        "susi2_seats": 6
       },
       {
         "id": "FASHION",
@@ -130,7 +138,8 @@
           "포트폴리오와 패션 마케팅"
         ],
         "career": "패션 디자인·패턴·제작·브랜드 분야의 실무 역량을 준비합니다.",
-        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1409"
+        "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1409",
+        "susi2_seats": 6
       }
     ],
     "schedule": [
@@ -142,13 +151,15 @@
         "application_end": "2026-10-01T23:59:00+09:00",
         "interview_date": "2026-10-14",
         "result_date": "2026-10-22",
-        "registration_start": "",
-        "registration_end": "",
-        "apply_url": "https://apply.jinhakapply.com/Notice/5041044/A",
+        "registration_start": "2026-10-22",
+        "registration_end": "2026-10-28",
+        "apply_url": "",
         "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "status_override": "AUTO",
-        "active": true
+        "active": true,
+        "documents_deadline": "2026-10-12T17:00:00+09:00",
+        "priority": 3
       },
       {
         "year": 2027,
@@ -156,15 +167,21 @@
         "round_name": "수시2차",
         "application_start": "2026-11-11T00:00:00+09:00",
         "application_end": "2026-11-27T23:59:00+09:00",
-        "interview_date": "",
-        "result_date": "",
-        "registration_start": "",
-        "registration_end": "",
+        "interview_date": "2026-12-02",
+        "result_date": "2026-12-17",
+        "registration_start": "2026-12-17",
+        "registration_end": "2026-12-23",
         "apply_url": "",
         "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "status_override": "AUTO",
-        "active": true
+        "active": true,
+        "documents_deadline": "2026-11-30T17:00:00+09:00",
+        "additional_registration_end": "2026-12-30",
+        "final_registration_start": "2027-02-04",
+        "final_registration_end": "2027-02-12",
+        "seats_total": 30,
+        "priority": 1
       },
       {
         "year": 2027,
@@ -172,20 +189,62 @@
         "round_name": "정시",
         "application_start": "2027-01-04T00:00:00+09:00",
         "application_end": "2027-01-22T23:59:00+09:00",
-        "interview_date": "",
-        "result_date": "",
-        "registration_start": "",
-        "registration_end": "",
+        "interview_date": "2027-01-27",
+        "result_date": "2027-02-04",
+        "registration_start": "2027-02-04",
+        "registration_end": "2027-02-12",
         "apply_url": "",
         "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "status_override": "AUTO",
-        "active": true
+        "active": true,
+        "documents_deadline": "2027-01-27T17:00:00+09:00",
+        "priority": 2
       }
     ],
     "results": [],
     "outcomes": [],
     "faq": [
+      {
+        "category": "admission",
+        "q": "2027학년도 수시2차 원서접수 기간은 언제인가요?",
+        "a": "2026년 11월 11일(수)부터 11월 27일(금) 23:59까지입니다. 모집요강을 반드시 확인하고 마감 전에 접수를 완료하세요."
+      },
+      {
+        "category": "admission",
+        "q": "수시2차 서류제출 및 면접은 언제인가요?",
+        "a": "증빙서류 제출 마감은 2026년 11월 30일(월) 17:00 도착분까지이며, 면접일은 12월 2일(수)입니다. 지원자별 면접시간·장소는 캠퍼스 공지를 확인하세요."
+      },
+      {
+        "category": "admission",
+        "q": "수시2차 합격자 발표와 등록 일정은?",
+        "a": "최초 합격자 발표는 2026년 12월 17일(목), 최초 등록은 12월 17~23일, 충원합격자 발표·등록은 12월 30일까지입니다. 수시 합격자 최종등록 일정은 2027년 2월 4~12일입니다."
+      },
+      {
+        "category": "admission",
+        "q": "수시2차 6개 학과의 모집인원은?",
+        "a": "공식 2027학년도 모집요강 기준 수시2차 모집인원은 총 30명입니다. 디지털콘텐츠과·주얼리디자인과·패션디자인과 각 6명, 빅데이터소프트웨어공학과·보건의료정보과·사이버보안과 각 4명입니다. 대학 사정에 따라 변경될 수 있습니다."
+      },
+      {
+        "category": "admission",
+        "q": "누가 수시2차에 지원할 수 있나요?",
+        "a": "공통적으로 고등학교 졸업(예정)자 또는 동등 이상의 학력이 있는 사람이 지원할 수 있습니다. 일반·특별·정원 외 특별전형은 자격요건이 서로 다르므로 공식 모집요강을 확인하세요."
+      },
+      {
+        "category": "admission",
+        "q": "수시2차 원서는 어디서 접수하나요?",
+        "a": "서울강서캠퍼스 공식 '인터넷원서접수' 안내에서 해당 모집 차수의 접수처를 확인하세요. 접수 전에는 아직 원서를 제출할 수 없으며, 실제 접수 완료 여부는 원서접수처에서 확인해야 합니다."
+      },
+      {
+        "category": "department",
+        "q": "보건의료정보과는 간호학과인가요?",
+        "a": "보건의료정보과는 간호학과가 아닙니다. 의료정보관리, 병원행정, 보험심사, 의료정보시스템 등 보건의료 정보·행정 실무를 중심으로 살펴보는 학과입니다."
+      },
+      {
+        "category": "department",
+        "q": "학과별 세부 교육과정은 어디에서 확인하나요?",
+        "a": "각 학과 카드와 상세 화면의 ‘공식 학과 홈페이지’ 버튼에서 최신 교육과정과 학과 소식을 확인할 수 있습니다."
+      },
       {
         "category": "admission",
         "q": "수시 합격 후 수능을 보아야 하나요?",
@@ -200,27 +259,12 @@
         "category": "admission",
         "q": "특별전형 지원자도 일반전형에 지원할 수 있나요?",
         "a": "공식 FAQ에 따르면 특별전형 지원자격이 있어도 일반전형 지원이 가능합니다. 세부 사항은 해당 연도 모집요강을 확인하세요."
-      },
-      {
-        "category": "department",
-        "q": "보건의료정보과는 간호학과인가요?",
-        "a": "보건의료정보과는 간호학과가 아닙니다. 의료정보관리, 병원행정, 보험심사, 의료정보시스템 등 보건의료 정보·행정 실무를 중심으로 살펴보는 학과입니다."
-      },
-      {
-        "category": "department",
-        "q": "학과별 세부 교육과정은 어디에서 확인하나요?",
-        "a": "각 학과 카드와 상세 화면의 ‘공식 학과 홈페이지’ 버튼에서 최신 교육과정과 학과 소식을 확인할 수 있습니다."
-      },
-      {
-        "category": "admission",
-        "q": "원서접수 일정은 어디에서 확인하나요?",
-        "a": "이 사이트의 입시안내와 서울강서캠퍼스 공식 모집요강 페이지에서 확인하세요. 일정은 공식 안내가 우선합니다."
       }
     ],
     "links": {
       "official_admission": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
       "application_guide": "https://www.kopo.ac.kr/kangseo/content.do?menu=1714",
-      "apply_susi1": "https://apply.jinhakapply.com/Notice/5041044/A"
+      "official_guide_pdf": "https://www.kopo.ac.kr/cmm/fms/Download.do?atchFileId=FILE_000000000452216&fileSn=0"
     }
   }
 }
