@@ -1,0 +1,20 @@
+name: Validate 2027 admissions site
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: node --check assets/js/common.js
+      - name: Validate admissions data and dates
+        run: node tests/verify-admissions.mjs

@@ -29,3 +29,42 @@
 .compatibility{max-width:760px;margin:auto;text-align:center;padding:90px 0}
 @media(max-width:920px){.admission-round{grid-template-columns:1fr}.date-list{grid-template-columns:repeat(2,1fr)}.feature-row.three{grid-template-columns:1fr}.admission-alert .container{justify-content:space-between}}
 @media(max-width:620px){.admission-alert{font-size:.78rem}.admission-alert .container{width:calc(100% - 22px);gap:8px}.admission-alert [data-dday]{display:none}.date-list{grid-template-columns:1fr}.dept-card-body strong{font-size:1.25rem}}
+
+
+/* 2027 수시2차: 핵심 일정과 학과별 모집인원을 첫 화면에 가독성 높게 표시 */
+.susi2-strip{background:#e8f3ff;border-block:1px solid #cadff2;padding:18px 0}
+.susi2-strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.susi2-strip-grid>div{min-width:0;padding:14px 16px;border-radius:14px;background:#fff;border:1px solid #d7e7f5}
+.susi2-strip-grid small,.susi2-strip-grid strong,.susi2-strip-grid span{display:block}
+.susi2-strip-grid small{font-size:.8rem;color:#3b5772;font-weight:800}
+.susi2-strip-grid strong{font-size:clamp(.92rem,1.5vw,1.12rem);line-height:1.35;color:#123e6b;margin:4px 0;overflow-wrap:anywhere}
+.susi2-strip-grid span{font-size:.78rem;color:#546a7d}
+.quota{display:inline-flex;background:#e6f3ff;color:#064a91;border:1px solid #c2ddf5;border-radius:8px;padding:6px 10px;font-size:.84rem;font-weight:900}
+.round-capacity{font-weight:800;font-size:.9rem;margin:.7rem 0 0}
+.admission-round{grid-template-columns:185px minmax(0,1fr);align-items:start;gap:20px}
+.admission-round .date-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.admission-round .date-list div{min-width:0}
+.admission-round .date-list strong{overflow-wrap:anywhere;line-height:1.4}
+.round-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.round-actions .btn{min-height:46px}
+.admission-round:not(.is-active) .date-list strong{color:#fff}
+.admission-round:not(.is-active) .round-capacity{color:#d8e8f5}
+.menu{min-height:44px;min-width:44px;cursor:pointer}
+@media(max-width:920px){
+  .susi2-strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .admission-round{grid-template-columns:1fr}
+  .admission-round .date-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .susi2-strip{padding:10px 0}
+  .susi2-strip-grid{gap:8px}
+  .susi2-strip-grid>div{padding:10px 11px}
+  .susi2-strip-grid strong{font-size:.93rem}
+  .admission-round{padding:20px 16px;gap:15px}
+  .admission-round .date-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+  .round-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .round-actions .btn{width:100%}
+  .mobile-nav{padding-bottom:max(7px,env(safe-area-inset-bottom))}
+  .mobile-nav a{display:flex;align-items:center;justify-content:center;min-height:44px}
+}
+@media(max-width:355px){.susi2-strip-grid,.admission-round .date-list{grid-template-columns:1fr}}

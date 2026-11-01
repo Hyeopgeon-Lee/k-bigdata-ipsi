@@ -2,7 +2,7 @@
 
 ## GitHub Pages
 
-저장소 Settings → Pages에서 Source를 Deploy from a branch, Branch를 main / (root)로 선택합니다. 주소는 https://ipsi.k-bigdata.kr/ 입니다. CNAME은 만들지 않습니다. 모든 경로는 Project Pages 하위 경로에서 동작하도록 상대경로로 작성되어 있습니다.
+저장소 Settings → Pages에서 Source를 Deploy from a branch, Branch를 main / (root)로 선택합니다. 주소는 https://ipsi.k-bigdata.kr/ 입니다. GitHub Pages에서 커스텀 도메인으로 설정하고 저장소에 이미 존재하는 CNAME과 일치하는지 확인합니다. 모든 경로는 Project Pages 하위 경로에서 동작하도록 상대경로로 작성되어 있습니다.
 
 ## Google Sheets와 GAS
 
