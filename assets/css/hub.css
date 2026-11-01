@@ -68,3 +68,78 @@
   .mobile-nav a{display:flex;align-items:center;justify-content:center;min-height:44px}
 }
 @media(max-width:355px){.susi2-strip-grid,.admission-round .date-list{grid-template-columns:1fr}}
+
+
+/* 2026-11-02: readability / keyboard / mobile-first pass
+   AA body-text contrast target >= 4.5:1 (WCAG 2.2 SC 1.4.3). */
+.schedule-band .eyebrow,.schedule-band .source,
+.final-cta .eyebrow{color:#d9eafc}
+.footer .source{color:#d9eafc}
+.footer .source a{color:#fff}
+.page-hero .eyebrow{color:#084f94}
+.eyebrow{font-size:.91rem;letter-spacing:.065em}
+.source{font-size:.91rem;line-height:1.65}
+.tag{font-size:.875rem}
+.chip{font-size:.875rem;line-height:1.45}
+.round-heading span{font-size:.9rem}
+.date-list small{font-size:.875rem;line-height:1.45;opacity:1}
+.admission-round.is-active .date-list small{color:#334f68}
+.admission-round:not(.is-active) .date-list small{color:#d9eafc}
+.admission-round .date-list strong{font-size:1rem;line-height:1.5;font-variant-numeric:tabular-nums}
+.admission-round .round-capacity{font-size:.94rem;line-height:1.5}
+.susi2-strip-grid small{font-size:.875rem}
+.susi2-strip-grid span{font-size:.875rem}
+.dept-card .quota{font-size:.9rem}
+.dept-card-body{gap:12px}
+.dept-copy{font-size:1rem;line-height:1.65}
+.accordion button{font-size:1rem;line-height:1.5;cursor:pointer}
+.answer{font-size:1rem;line-height:1.75}
+.option{font-size:1rem;line-height:1.6;min-height:52px}
+.mobile-nav a[aria-current="page"]{background:#eaf4ff;color:#0f497d;border-radius:12px}
+.mobile-nav a:focus-visible{outline-offset:-2px}
+.admission-round .round-actions .btn{text-align:center}
+@media(max-width:920px){
+  /* Keep the goal and CTA visible before the promotional photo on phones/tablets. */
+  .hero-copy{order:0}
+  .hero-visual{order:1}
+  .mobile-nav a{font-size:.875rem;line-height:1.25}
+  .mobile-nav{padding-inline:9px;gap:5px}
+  .admission-round .date-list{gap:18px}
+}
+@media(max-width:620px){
+  .section{padding:56px 0}
+  .hero{padding:30px 0 48px}
+  .hero-grid{gap:22px}
+  .hero-copy h1{font-size:clamp(2.05rem,8.6vw,2.38rem);line-height:1.17;letter-spacing:-.045em;overflow-wrap:keep-all}
+  .hero-copy .lead{font-size:1.03rem;line-height:1.78}
+  .hero-facts{margin-top:14px}
+  .hero .actions{margin-top:19px}
+  .hero-visual>img{aspect-ratio:16/9}
+  .status-float{padding:14px 18px}
+  .dday{font-size:1.7rem}
+  .page-hero{padding:34px 0}
+  .page-hero h1{font-size:clamp(2rem,8.3vw,2.3rem);line-height:1.2;letter-spacing:-.045em}
+  .page-hero p{font-size:1rem;line-height:1.7}
+  /* Secondary AI illustration is decorative; prioritize the information on small screens. */
+  .page-hero-visual{display:none}
+  .section h2,.split h2{font-size:clamp(1.8rem,7.1vw,2.25rem);line-height:1.2}
+  .admission-alert{font-size:.875rem}
+  .admission-alert .container{min-height:48px;gap:12px;justify-content:space-between}
+  .admission-alert .container>span{line-height:1.35;min-width:0}
+  .admission-alert a{flex:none;text-align:right;line-height:1.3}
+  .admission-round .date-list{gap:16px 12px}
+  .admission-round .date-list div{padding-left:10px}
+  .admission-round .date-list strong{font-size:.96rem}
+  .susi2-strip-grid>div{padding:12px}
+  .susi2-strip-grid strong{font-size:1rem}
+  .round-heading h3{font-size:1.27rem;line-height:1.35}
+  .mobile-nav a{min-height:48px;padding:9px 1px}
+  .footer{padding-bottom:128px}
+}
+@media(max-width:355px){
+  .admission-alert .container{display:grid;grid-template-columns:1fr;gap:3px;padding-block:8px}
+  .admission-alert a{text-align:left}
+}
+@media(prefers-reduced-motion:reduce){
+  .dept-card:hover,.btn:hover{transform:none}
+}
