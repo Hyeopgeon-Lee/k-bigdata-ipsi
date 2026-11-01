@@ -36,7 +36,7 @@ assert.equal(context.getRoundState(second,new Date('2026-11-10T23:59:00+09:00'))
 assert.equal(context.getRoundState(second,new Date('2026-11-11T00:01:00+09:00')), 'OPEN');
 assert.equal(context.getDDay(second,new Date('2026-11-27T20:00:00+09:00')), '오늘 23:59 마감');
 assert.equal(context.getRoundState(second,new Date('2026-11-28T00:00:00+09:00')), 'CLOSED');
-const november = context.getActiveRound(data.schedule.filter(r=>r.round_id!=='JEONGSI'));
+const november = context.getActiveRound(data.schedule, new Date('2026-11-02T08:30:00+09:00'));
 assert.equal(november.round_id, 'SUSI2');
 
 console.log('PASS 2027 수시2차 데이터·CTA·SEO·서울 기준 D-Day');
