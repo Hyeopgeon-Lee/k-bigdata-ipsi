@@ -9,7 +9,17 @@ function getRoundState(round,now=new Date()){if(round.status_override&&round.sta
 function getActiveRound(rounds,now=new Date()){return rounds.find(r=>getRoundState(r,now)==='OPEN')||rounds.find(r=>getRoundState(r,now)==='UPCOMING')||rounds.at(-1)}
 function seoulDayNumber(date){const parts=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date).filter(p=>p.type!=='literal').map(p=>[p.type,Number(p.value)]));return Date.UTC(parts.year,parts.month-1,parts.day)/86400000}
 function getDDay(round,now=new Date()){const state=getRoundState(round,now);if(state==='CLOSED')return'접수 종료';const target=state==='OPEN'?round.application_end.slice(0,10):round.application_start.slice(0,10);const [year,month,day]=target.split('-').map(Number);const days=Math.max(0,Date.UTC(year,month-1,day)/86400000-seoulDayNumber(now));if(state==='OPEN'&&days===0)return'오늘 23:59 마감';if(state==='OPEN'&&days===1)return'내일 마감';return state==='OPEN'?`마감 D-${days}`:`접수 D-${days}`}
-function formatDate(value,time=false){if(!value)return'';const date=new Date(value.length===10?`${value}T00:00:00+09:00`:value);return new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',...(time?{hour:'2-digit',minute:'2-digit',hourCycle:'h23'}:{})}).format(date).replace(/\. /g,'.').replace(/\.$/,'')}
+function formatDate(value,showTime=false){
+  if(!value)return'';
+  const date=new Date(value.length===10?`${value}T00:00:00+09:00`:value);
+  if(Number.isNaN(date.getTime()))return'';
+  const parts=Object.fromEntries(new Intl.DateTimeFormat('en-US',{
+    timeZone:'Asia/Seoul',
+    year:'numeric',month:'2-digit',day:'2-digit',
+    ...(showTime?{hour:'2-digit',minute:'2-digit',hourCycle:'h23'}:{})
+  }).formatToParts(date).filter(part=>part.type!=='literal').map(part=>[part.type,part.value]));
+  return `${parts.year}.${parts.month}.${parts.day}${showTime?` ${parts.hour}:${parts.minute}`:''}`;
+}
 function formatDateRange(start,end,showEndTime=false){
   if(!start||!end)return formatDate(start||end,showEndTime);
   const first=formatDate(start);
