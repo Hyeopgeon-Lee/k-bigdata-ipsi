@@ -62,3 +62,35 @@ assert(css.includes('.page-hero-visual{display:none}'),'모바일 정보 페이�
 assert(css.includes('.mobile-nav a[aria-current="page"]'));
 assert(js.includes('setupNavigationReadability()'));
 console.log('PASS contrast, reading order, mobile navigation readability');
+
+
+assert.equal(context.formatDate('2026-11-27T23:59:00+09:00',true),'2026.11.27 23:59','마감 날짜와 시간이 공백으로 분리돼야 합니다');
+assert.equal(context.formatDateRange('2026-11-11T00:00:00+09:00','2026-11-27T23:59:00+09:00',true),'2026.11.11 ~ 11.27 23:59','같은 해의 날짜 범위는 짧게 표시해야 합니다');
+assert(css.includes('.hero-visual{display:none}'),'모바일 첫 화면에서 모집 일정보다 장식 이미지가 먼저 표시되면 안 됩니다');
+assert(css.includes('.admission-alert [data-dday]{display:inline}'),'모바일에서도 접수 D-Day를 표시해야 합니다');
+assert(css.lastIndexOf('.admission-alert [data-dday]{display:inline}')>css.lastIndexOf('.admission-alert [data-dday]{display:none}'));
+assert(css.includes('.mobile-nav a{white-space:nowrap'),'모바일 하단 탐색 문구 줄바꿈을 방지해야 합니다');
+
+class FixedDate extends Date {
+  constructor(...args){super(...(args.length?args:['2026-11-02T08:30:00+09:00']));}
+  static now(){return Date.parse('2026-11-02T08:30:00+09:00');}
+}
+context.Date=FixedDate;
+const compactLink={
+  textContent:'',href:'',attributes:{},
+  closest(){return {className:'mobile-nav'};},
+  setAttribute(key,value){this.attributes[key]=value;}
+};
+const normalLink={
+  textContent:'',href:'',attributes:{},
+  closest(){return null;},
+  setAttribute(key,value){this.attributes[key]=value;}
+};
+context.document.querySelectorAll=selector=>selector==='[data-apply]'?[compactLink,normalLink]:[];
+vm.runInContext('SITE = '+JSON.stringify({data}),context);
+vm.runInContext('renderAdmissionState()',context);
+assert.equal(compactLink.textContent,'접수안내','접수 시작 전 모바일 하단 메뉴에 긴 문구를 표시하면 안 됩니다');
+assert.equal(normalLink.textContent,'공식 원서접수 안내 ↗');
+assert.equal(compactLink.href,data.links.application_guide);
+assert(compactLink.attributes['aria-label'].includes('수시2차'));
+console.log('PASS mobile CTA, deadline formatting, visible countdown, compact navigation');
