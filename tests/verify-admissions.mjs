@@ -40,3 +40,25 @@ const november = context.getActiveRound(data.schedule, new Date('2026-11-02T08:3
 assert.equal(november.round_id, 'SUSI2');
 
 console.log('PASS 2027 수시2차 데이터·CTA·SEO·서울 기준 D-Day');
+
+
+const css = file('assets/css/hub.css');
+function relativeLuminance(hex){
+  const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255)
+    .map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4);
+  return rgb[0]*0.2126+rgb[1]*0.7152+rgb[2]*0.0722;
+}
+function contrastRatio(colorA,colorB){
+  const [low,high]=[relativeLuminance(colorA),relativeLuminance(colorB)].sort((a,b)=>a-b);
+  return (high+0.05)/(low+0.05);
+}
+assert(contrastRatio('#d9eafc','#102a43')>=4.5,'일정 영역의 보조 텍스트 대비가 부족합니다');
+assert(contrastRatio('#d9eafc','#071f35')>=4.5,'푸터 보조 텍스트 대비가 부족합니다');
+assert(css.includes('.schedule-band .eyebrow,.schedule-band .source,'));
+assert(css.includes('.footer .source{color:#d9eafc}'));
+assert(css.includes('.hero-copy{order:0}'),'모바일에서는 제목이 이미지보다 먼저 보여야 합니다');
+assert(css.includes('.hero-visual{order:1}'));
+assert(css.includes('.page-hero-visual{display:none}'),'모바일 정보 페이지의 긴 장식 이미지를 줄이세요');
+assert(css.includes('.mobile-nav a[aria-current="page"]'));
+assert(js.includes('setupNavigationReadability()'));
+console.log('PASS contrast, reading order, mobile navigation readability');
