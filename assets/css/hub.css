@@ -110,7 +110,7 @@
   .section{padding:56px 0}
   .hero{padding:30px 0 48px}
   .hero-grid{gap:22px}
-  .hero-copy h1{font-size:clamp(2.05rem,8.6vw,2.38rem);line-height:1.17;letter-spacing:-.045em;overflow-wrap:keep-all}
+  .hero-copy h1{font-size:clamp(2.05rem,8.6vw,2.38rem);line-height:1.17;letter-spacing:-.045em;word-break:keep-all}
   .hero-copy .lead{font-size:1.03rem;line-height:1.78}
   .hero-facts{margin-top:14px}
   .hero .actions{margin-top:19px}
