@@ -143,3 +143,40 @@
 @media(prefers-reduced-motion:reduce){
   .dept-card:hover,.btn:hover{transform:none}
 }
+
+
+/* 2027 수시2차: 모바일 첫 화면의 지원 행동과 일정 가독성 최종 정리 */
+html{scroll-padding-top:96px}
+#majors{scroll-margin-top:96px}
+.admission-alert a{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:920px){
+  .mobile-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .mobile-nav a{min-width:0}
+}
+@media(max-width:620px){
+  /* 4개의 상세 일정이 첫 화면 바로 아래 오도록 장식용 메인 사진은 숨깁니다. */
+  .hero-visual{display:none}
+  .hero{padding-bottom:32px}
+  .hero-copy h1{margin-top:10px;margin-bottom:14px}
+  .hero .actions{display:grid;grid-template-columns:1fr;gap:9px}
+  .hero .actions .btn{min-height:50px;line-height:1.4}
+  .hero-facts{gap:6px}
+  .hero-facts .chip{padding:6px 9px}
+  /* D-Day를 작은 화면에서도 생략하지 않고 보여줍니다. */
+  .admission-alert [data-dday]{display:inline}
+  .admission-alert .container{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:4px;padding-block:5px}
+  .admission-alert .container>span{overflow-wrap:anywhere;font-size:.83rem;line-height:1.4}
+  .admission-alert a{white-space:nowrap;font-size:.875rem;padding-block:5px}
+  /* JS에서 제공하는 짧은 '접수안내' 라벨이 한 칸 안에 유지되도록 합니다. */
+  .mobile-nav{gap:4px}
+  .mobile-nav a{white-space:nowrap;font-size:.82rem;line-height:1.3;padding-inline:0}
+  .susi2-strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .susi2-strip-grid small{font-size:.86rem}
+  .susi2-strip-grid strong{font-size:.96rem}
+  .susi2-strip-grid span{font-size:.83rem}
+}
+@media(max-width:355px){
+  .admission-alert .container{grid-template-columns:1fr}
+  .admission-alert a{justify-self:start}
+  .mobile-nav a{font-size:.78rem}
+}
