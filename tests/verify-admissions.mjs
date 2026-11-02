@@ -46,6 +46,15 @@ for (const path of ['index.html','departments/index.html','admission/index.html'
 assert.equal(data.departments.find(d=>d.id==='BIGDATA')?.susi2_seats,14);
 assert.equal(second.seats_total,93);
 
+const publicPages=['index.html','departments/index.html','admission/index.html','find/index.html','faq/index.html',
+  'departments/bigdata/index.html','departments/content/index.html','departments/health/index.html',
+  'departments/security/index.html','departments/jewelry/index.html','departments/fashion/index.html',
+  'compare/index.html','results/index.html','outcomes/index.html','404.html'];
+for (const path of publicPages) {
+  const html=file(path);
+  assert(html.includes('common.js?v=20261102-clean4'), `${path}: use latest site script`);
+  assert(!/변경\\s*(?:모집|인원)|등록\\s*미달|미충원|모집\\s*저조/u.test(html), `${path}: negative recruitment copy`);
+}
 const js = file('assets/js/common.js');
 const context = {document:{documentElement:{dataset:{root:'./'}},addEventListener(){}},Intl,Date,console};
 vm.createContext(context);
