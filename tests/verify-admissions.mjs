@@ -28,6 +28,16 @@ assert(home.includes('11.30(월)'));
 assert(home.includes('12.02(수)'));
 assert(home.includes('data-admission-schedule'));
 assert(file('admission/index.html').includes('공식 인터넷원서접수 안내'));
+// Keep applicant-facing copy positive without changing the published dates or quota.
+for (const path of ['index.html','departments/index.html','admission/index.html','assets/js/common.js','data/fallback.json']) {
+  const content=file(path);
+  for (const phrase of ['등록 미달','미충원','변경 모집인원','변경 모집','변경 인원']) {
+    assert(!content.includes(phrase), `${path} contains negative admission marketing copy: ${phrase}`);
+  }
+}
+assert(data.faq.some(item=>item.q==='수시2차 모집인원은 몇 명인가요? (정원 내·외 합산)'));
+assert(data.departments.every(item=>Number.isInteger(item.susi2_seats)));
+assert(file('index.html').includes('6개 학과 총 93명'));
 
 const js = file('assets/js/common.js');
 const context = {document:{documentElement:{dataset:{root:'./'}},addEventListener(){}},Intl,Date,console};
