@@ -2,7 +2,7 @@ const ROOT=document.documentElement.dataset.root||'./';
 const FALLBACK_URL=`${ROOT}data/fallback.json`,API_ENDPOINT='',CACHE_KEY='kopo.cms';
 let SITE;
 const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-async function fetchJson(url){const response=await fetch(url);if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json()}
+async function fetchJson(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.json()}
 async function loadData(){if(!API_ENDPOINT)return fetchJson(FALLBACK_URL);try{const data=await fetchJson(`${API_ENDPOINT}?resource=bootstrap`);if(!data.ok)throw new Error('Invalid API response');localStorage.setItem(CACHE_KEY,JSON.stringify(data));return data}catch(error){try{const cached=JSON.parse(localStorage.getItem(CACHE_KEY));if(cached?.ok)return cached}catch(_){}return fetchJson(FALLBACK_URL)}}
 function nowInSeoul(){return new Date()}
 function getRoundState(round,now=new Date()){if(round.status_override&&round.status_override!=='AUTO')return round.status_override;return now<new Date(round.application_start)?'UPCOMING':now<=new Date(round.application_end)?'OPEN':'CLOSED'}
