@@ -53,7 +53,7 @@ const publicPages=['index.html','departments/index.html','admission/index.html',
 for (const path of publicPages) {
   const html=file(path);
   assert(html.includes('common.js?v=20261102-clean4'), `${path}: use latest site script`);
-  assert(!/변경\\s*(?:모집|인원)|등록\\s*미달|미충원|모집\\s*저조/u.test(html), `${path}: negative recruitment copy`);
+  assert(!/변경\s*(?:모집|인원)|등록\s*미달|미충원|모집\s*저조/u.test(html), `${path}: negative recruitment copy`);
 }
 const js = file('assets/js/common.js');
 const context = {document:{documentElement:{dataset:{root:'./'}},addEventListener(){}},Intl,Date,console};
