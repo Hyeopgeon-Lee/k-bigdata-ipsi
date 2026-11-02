@@ -37,7 +37,14 @@ for (const path of ['index.html','departments/index.html','admission/index.html'
 }
 assert(data.faq.some(item=>item.q==='수시2차 모집인원은 몇 명인가요? (정원 내·외 합산)'));
 assert(data.departments.every(item=>Number.isInteger(item.susi2_seats)));
-assert(file('index.html').includes('6개 학과 총 93명'));
+assert(file('index.html').includes('총 93명의 신입생'));
+// Test every public-facing page and rendering source for enrollment-shortfall framing.
+for (const path of ['index.html','departments/index.html','admission/index.html','find/index.html','faq/index.html','assets/js/common.js','data/fallback.json']) {
+  const content=file(path);
+  assert(!/변경\s*(?:모집|인원)|등록\s*미달|미충원|모집\s*저조/u.test(content), `${path}: prohibited negative recruitment language`);
+}
+assert.equal(data.departments.find(d=>d.id==='BIGDATA')?.susi2_seats,14);
+assert.equal(second.seats_total,93);
 
 const js = file('assets/js/common.js');
 const context = {document:{documentElement:{dataset:{root:'./'}},addEventListener(){}},Intl,Date,console};
