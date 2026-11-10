@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "version": "2026.11.02.susi2-revised-93",
-  "updatedAt": "2026-11-02T16:40:00+09:00",
+  "version": "2026.11.10.susi2-revised-76",
+  "updatedAt": "2026-11-10T13:31:00+09:00",
   "data": {
     "config": {
       "admission_year": "2027",
@@ -11,9 +11,9 @@
       "campus_address": "서울특별시 강서구 우장산로10길 112",
       "base_site_url": "https://ipsi.k-bigdata.kr/",
       "admission_focus": "SUSI2",
-      "verified_at": "2026-11-02",
+      "verified_at": "2026-11-10",
       "official_guide_pdf": "https://www.kopo.ac.kr/cmm/fms/Download.do?atchFileId=FILE_000000000452216&fileSn=0",
-      "seats_source": "2026-11-02 학과 제공 수시2차 모집인원(정원 내·외 합산)"
+      "seats_source": "2026-11-10 학과 제공 수시2차 모집인원 정정 자료(정원 내·외 합산, 정시 제외)"
     },
     "departments": [
       {
@@ -35,7 +35,7 @@
         ],
         "career": "소프트웨어·데이터·클라우드 분야 실무 역량을 탐색합니다.",
         "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1547",
-        "susi2_seats": 14
+        "susi2_seats": 11
       },
       {
         "id": "CONTENT",
@@ -56,7 +56,7 @@
         ],
         "career": "영상·콘텐츠 제작과 디자인 분야의 포트폴리오를 준비합니다.",
         "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1517",
-        "susi2_seats": 17
+        "susi2_seats": 12
       },
       {
         "id": "HEALTH",
@@ -77,7 +77,7 @@
         ],
         "career": "간호학과가 아닌 보건의료 정보·행정 실무 분야를 준비합니다.",
         "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1522",
-        "susi2_seats": 8
+        "susi2_seats": 5
       },
       {
         "id": "SECURITY",
@@ -98,7 +98,7 @@
         ],
         "career": "네트워크·시스템·웹 보안 직무에 필요한 분석과 방어 역량을 기릅니다.",
         "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=12135",
-        "susi2_seats": 11
+        "susi2_seats": 7
       },
       {
         "id": "JEWELRY",
@@ -140,7 +140,7 @@
         ],
         "career": "패션 디자인·패턴·제작·브랜드 분야의 실무 역량을 준비합니다.",
         "url": "https://www.kopo.ac.kr/kangseo/content.do?menu=1409",
-        "susi2_seats": 21
+        "susi2_seats": 19
       }
     ],
     "schedule": [
@@ -181,11 +181,11 @@
         "additional_registration_end": "2026-12-30",
         "final_registration_start": "2027-02-04",
         "final_registration_end": "2027-02-12",
-        "seats_total": 93,
+        "seats_total": 76,
         "priority": 1,
         "seats_basis": "정원 내·외 합산",
-        "seats_source": "2026-11-02 학과 제공 수시2차 모집인원",
-        "seats_updated_at": "2026-11-02"
+        "seats_source": "2026-11-10 학과 제공 수시2차 모집인원 정정 자료(정시 모집인원 제외)",
+        "seats_updated_at": "2026-11-10"
       },
       {
         "year": 2027,
@@ -227,7 +227,7 @@
       {
         "category": "admission",
         "q": "수시2차 모집인원은 몇 명인가요? (정원 내·외 합산)",
-        "a": "2026년 11월 2일 학과 제공 자료 기준으로 수시2차 6개 학과에서 총 93명(정원 내·외 합산)을 모집합니다. 디지털콘텐츠과 17명, 보건의료정보과 8명, 빅데이터소프트웨어공학과 14명, 사이버보안과 11명, 주얼리디자인과 22명, 패션디자인과 21명입니다. 전형별 세부사항은 캠퍼스 공식 입학안내를 확인하세요."
+        "a": "2026년 11월 10일 학과 제공 정정 자료 기준으로 2027학년도 수시2차에서 6개 학과 총 76명(정원 내·외 합산)을 모집합니다. 디지털콘텐츠과 12명, 보건의료정보과 5명, 빅데이터소프트웨어공학과 11명, 사이버보안과 7명, 주얼리디자인과 22명, 패션디자인과 19명입니다. 이전 안내에는 정시 모집인원이 포함되어 있어 수시2차 인원만으로 정정했습니다. 전형별 세부사항은 캠퍼스 공식 입학안내를 확인하세요."
       },
       {
         "category": "admission",
