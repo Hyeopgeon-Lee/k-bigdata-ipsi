@@ -7,7 +7,7 @@ const data = JSON.parse(file('data/fallback.json')).data;
 const second = data.schedule.find(r => r.round_id === 'SUSI2');
 assert(second, '수시2차 일정이 있어야 합니다');
 assert.equal(data.departments.length, 6);
-assert.equal(data.departments.reduce((sum, d) => sum + d.susi2_seats, 0), 93);
+assert.equal(data.departments.reduce((sum, d) => sum + d.susi2_seats, 0), 76);
 assert.equal(second.application_start.slice(0, 10), '2026-11-11');
 assert.equal(second.application_end, '2026-11-27T23:59:00+09:00');
 assert.equal(second.documents_deadline, '2026-11-30T17:00:00+09:00');
@@ -15,8 +15,8 @@ assert.equal(second.interview_date, '2026-12-02');
 assert.equal(second.result_date, '2026-12-17');
 assert.equal(second.registration_end, '2026-12-23');
 assert.equal(second.final_registration_end, '2027-02-12');
-assert.equal(second.seats_total, 93);
-assert.deepEqual(Object.fromEntries(data.departments.map(d=>[d.id,d.susi2_seats])), {BIGDATA:14,CONTENT:17,HEALTH:8,SECURITY:11,JEWELRY:22,FASHION:21});
+assert.equal(second.seats_total, 76);
+assert.deepEqual(Object.fromEntries(data.departments.map(d=>[d.id,d.susi2_seats])), {BIGDATA:11,CONTENT:12,HEALTH:5,SECURITY:7,JEWELRY:22,FASHION:19});
 assert.equal(second.seats_basis,'정원 내·외 합산');
 assert.equal(second.apply_url, '', '검증 안 된 수시2차 직접 접수 링크를 표시하면 안 됩니다');
 assert(!JSON.stringify(data).includes('5041044/A'), '수시1차 전용 직접 접수 URL이 남아 있습니다');
@@ -37,14 +37,14 @@ for (const path of ['index.html','departments/index.html','admission/index.html'
 }
 assert(data.faq.some(item=>item.q==='수시2차 모집인원은 몇 명인가요? (정원 내·외 합산)'));
 assert(data.departments.every(item=>Number.isInteger(item.susi2_seats)));
-assert(file('index.html').includes('총 93명의 신입생'));
+assert(file('index.html').includes('총 76명의 신입생'));
 // Test every public-facing page and rendering source for enrollment-shortfall framing.
 for (const path of ['index.html','departments/index.html','admission/index.html','find/index.html','faq/index.html','assets/js/common.js','data/fallback.json']) {
   const content=file(path);
   assert(!/변경\s*(?:모집|인원)|등록\s*미달|미충원|모집\s*저조/u.test(content), `${path}: prohibited negative recruitment language`);
 }
-assert.equal(data.departments.find(d=>d.id==='BIGDATA')?.susi2_seats,14);
-assert.equal(second.seats_total,93);
+assert.equal(data.departments.find(d=>d.id==='BIGDATA')?.susi2_seats,11);
+assert.equal(second.seats_total,76);
 
 const publicPages=['index.html','departments/index.html','admission/index.html','find/index.html','faq/index.html',
   'departments/bigdata/index.html','departments/content/index.html','departments/health/index.html',
