@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "version": "2026.11.10.susi2-revised-76",
-  "updatedAt": "2026-11-10T13:31:00+09:00",
+  "version": "2026.11.13.susi2-direct-apply",
+  "updatedAt": "2026-11-12T19:17:34.379Z",
   "data": {
     "config": {
       "admission_year": "2027",
@@ -172,7 +172,7 @@
         "result_date": "2026-12-17",
         "registration_start": "2026-12-17",
         "registration_end": "2026-12-23",
-        "apply_url": "",
+        "apply_url": "https://apply.jinhakapply.com/Notice/5041045/A",
         "guide_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "source_url": "https://www.kopo.ac.kr/kangseo/content.do?menu=321",
         "status_override": "AUTO",
@@ -237,7 +237,7 @@
       {
         "category": "admission",
         "q": "수시2차 원서는 어디서 접수하나요?",
-        "a": "서울강서캠퍼스 공식 ‘인터넷원서접수’ 안내에서 수시2차 접수처를 확인하세요. 원서접수 기간은 2026년 11월 11일부터 27일 23:59까지이며, 접수 완료 여부는 해당 원서접수처에서 확인할 수 있습니다."
+        "a": "2027학년도 한국폴리텍Ⅰ대학(서울강서 포함) 수시2차 원서는 진학어플라이에서 직접 접수합니다. 원서접수 기간은 2026년 11월 11일부터 27일 23:59까지이며, 접수 완료 여부는 진학어플라이에서 확인할 수 있습니다."
       },
       {
         "category": "department",
