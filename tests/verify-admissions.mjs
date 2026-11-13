@@ -119,6 +119,6 @@ vm.runInContext('SITE = '+JSON.stringify({data}),context);
 vm.runInContext('renderAdmissionState()',context);
 assert.equal(compactLink.textContent,'접수안내','접수 시작 전 모바일 하단 메뉴에 긴 문구를 표시하면 안 됩니다');
 assert.equal(normalLink.textContent,'공식 원서접수 안내 ↗');
-assert.equal(compactLink.href,data.links.application_guide);
+assert.equal(compactLink.href,second.apply_url);
 assert(compactLink.attributes['aria-label'].includes('수시2차'));
 console.log('PASS mobile CTA, deadline formatting, visible countdown, compact navigation');
