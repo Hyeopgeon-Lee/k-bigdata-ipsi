@@ -73,3 +73,12 @@ function setupFaq(){const input=document.querySelector('[data-faq-search]');docu
 function setupFinder(){const root=document.querySelector('[data-finder]');if(!root)return;const questions=['가장 해보고 싶은 일은 무엇인가요?','어떤 결과물을 만들고 싶나요?','관심 있는 작업 방식은 무엇인가요?','배우고 싶은 도구는 무엇인가요?','졸업 후 관심 분야는 무엇인가요?'];let index=0;const scores=Object.fromEntries(SITE.data.departments.map(d=>[d.id,0]));const render=()=>{if(index===questions.length){const ranked=[...SITE.data.departments].sort((a,b)=>scores[b.id]-scores[a.id]);root.innerHTML=`<p class="eyebrow">먼저 살펴볼 학과</p><h2>${escapeHtml(ranked[0].name)}</h2><p class="lead">${escapeHtml(ranked[0].tag)}</p><div class="chips">${ranked[0].keys.map(k=>`<span class="chip">${escapeHtml(k)}</span>`).join('')}</div><div class="actions"><a class="btn" href="${escapeHtml(ranked[0].url)}" target="_blank" rel="noopener noreferrer">공식 학과 홈페이지 ↗</a><button class="btn secondary" type="button" data-restart>다시 찾기</button></div><p class="source">이 결과는 진로 적성검사가 아닌 학과 탐색 안내입니다. 함께 살펴볼 학과: ${escapeHtml(ranked[1].name)}</p>`;root.querySelector('[data-restart]').onclick=()=>{index=0;Object.keys(scores).forEach(k=>scores[k]=0);render()};return}root.innerHTML=`<div class="progress" aria-label="진행률"><span style="width:${(index+1)/questions.length*100}%"></span></div><p>${index+1} / ${questions.length}</p><h2>${questions[index]}</h2>${SITE.data.departments.map(d=>`<button class="option" type="button" data-id="${d.id}">${escapeHtml(d.keys[index%d.keys.length])} — ${escapeHtml(d.short)}</button>`).join('')}`;root.querySelectorAll('.option').forEach(b=>b.onclick=()=>{scores[b.dataset.id]+=2;index++;render()})};render()}
 document.addEventListener('DOMContentLoaded',async()=>{setupMenu();setupNavigationReadability();try{SITE=await loadData();renderAdmissionState();renderDepartmentCards();renderDepartmentDetail();renderAdmissionSchedule();setupFaq();setupFinder();setInterval(renderAdmissionState,60000)}catch(error){console.error('입시 데이터를 불러오지 못했습니다.',error)}});
 
+// Load optional GA4 on the production admissions domain only. This runs
+// after DOMContentLoaded and does not affect local or GitHub Pages previews.
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof location === 'undefined' || location.hostname !== 'ipsi.k-bigdata.kr') return;
+  const analyticsScript = document.createElement('script');
+  analyticsScript.async = true;
+  analyticsScript.src = ROOT + 'assets/js/analytics.js?v=20261113-ga4';
+  document.head.appendChild(analyticsScript);
+});
