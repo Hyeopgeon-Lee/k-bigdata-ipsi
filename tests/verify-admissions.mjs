@@ -18,7 +18,7 @@ assert.equal(second.final_registration_end, '2027-02-12');
 assert.equal(second.seats_total, 76);
 assert.deepEqual(Object.fromEntries(data.departments.map(d=>[d.id,d.susi2_seats])), {BIGDATA:11,CONTENT:12,HEALTH:5,SECURITY:7,JEWELRY:22,FASHION:19});
 assert.equal(second.seats_basis,'정원 내·외 합산');
-assert.equal(second.apply_url, '', '검증 안 된 수시2차 직접 접수 링크를 표시하면 안 됩니다');
+assert.equal(second.apply_url, 'https://apply.jinhakapply.com/Notice/5041045/A', '확정된 수시2차 직접 접수 링크를 유지해야 합니다');
 assert(!JSON.stringify(data).includes('5041044/A'), '수시1차 전용 직접 접수 URL이 남아 있습니다');
 
 const home = file('index.html');
@@ -52,7 +52,7 @@ const publicPages=['index.html','departments/index.html','admission/index.html',
   'compare/index.html','results/index.html','outcomes/index.html','404.html'];
 for (const path of publicPages) {
   const html=file(path);
-  assert(html.includes('common.js?v=20261102-clean4'), `${path}: use latest site script`);
+  assert(html.includes('common.js?v=20261113-ga4'), `${path}: use latest site script`);
   assert(!/변경\s*(?:모집|인원)|등록\s*미달|미충원|모집\s*저조/u.test(html), `${path}: negative recruitment copy`);
 }
 const js = file('assets/js/common.js');

@@ -15,6 +15,10 @@ jobs:
         with:
           node-version: '22'
       - name: Check JavaScript syntax
-        run: node --check assets/js/common.js
+        run: |
+          node --check assets/js/common.js
+          node --check assets/js/analytics.js
       - name: Validate admissions data and dates
-        run: node tests/verify-admissions.mjs
+        run: |
+          node tests/verify-admissions.mjs
+          node tests/verify-analytics.mjs
